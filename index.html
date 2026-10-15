@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio profesional de Jorge Loreto, desarrollador de software junior.">
+  <title>Jorge Loreto | Desarrollador de Software Junior</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1020;--panel:#121a2e;--text:#f3f6ff;--muted:#a9b4cc;--accent:#7c9cff;--line:#26324d}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at top right,#1b2c55 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit}
+    .wrap{width:min(1080px,92%);margin:auto}
+    header{padding:24px 0;border-bottom:1px solid var(--line)}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .brand{font-weight:800;letter-spacing:.04em}
+    .links{display:flex;gap:18px;flex-wrap:wrap}
+    .links a{text-decoration:none;color:var(--muted);font-size:.95rem}
+    .links a:hover{color:var(--text)}
+    .hero{padding:90px 0 76px;max-width:820px}
+    .eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem}
+    h1{font-size:clamp(2.7rem,7vw,5.2rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0}
+    h1 span{color:var(--accent)}
+    .lead{font-size:1.16rem;color:var(--muted);max-width:700px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-block;padding:11px 17px;border:1px solid var(--line);border-radius:10px;text-decoration:none;font-weight:700}
+    .primary{background:var(--accent);color:#091126;border-color:var(--accent)}
+    section{padding:46px 0}
+    h2{font-size:1.8rem;letter-spacing:-.025em;margin:0 0 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+    .card{padding:22px;background:rgba(18,26,46,.88);border:1px solid var(--line);border-radius:16px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted)}
+    .tag{display:inline-block;margin:14px 6px 0 0;padding:4px 9px;border-radius:999px;background:#1d2a48;color:#cbd7ff;font-size:.78rem}
+    .about{max-width:800px;color:var(--muted)}
+    .skill-list{display:flex;gap:9px;flex-wrap:wrap}
+    .skill-list span{padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:var(--panel)}
+    .contact{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;padding:28px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+    footer{padding:30px 0;margin-top:38px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+    @media(max-width:600px){.hero{padding:62px 0 48px}.links{gap:12px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Navegación principal">
+        <a class="brand" href="#inicio" style="text-decoration:none">JORGE LORETO</a>
+        <div class="links">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="inicio">
+      <div class="eyebrow">Portafolio profesional</div>
+      <h1>Hola, soy <span>Jorge Loreto.</span></h1>
+      <p class="lead">Desarrollador de Software Junior enfocado en crear soluciones digitales útiles, aprender nuevas tecnologías y convertir ideas en proyectos funcionales.</p>
+      <div class="actions">
+        <a class="btn primary" href="#proyectos">Ver mis proyectos</a>
+        <a class="btn" href="https://www.linkedin.com/in/joanloreto" target="_blank" rel="noopener noreferrer">Conectar en LinkedIn</a>
+      </div>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p class="about">Soy egresado de Ingeniería de Desarrollo de Software, con título en trámite. Tengo experiencia en operaciones, control de información e inventarios, así como manejo de Excel y SAP. Busco seguir desarrollando mis habilidades técnicas y aportar soluciones prácticas mediante el software.</p>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="skill-list">
+        <span>Fundamentos de programación</span><span>Desarrollo web</span><span>Excel</span><span>Word y PowerPoint</span><span>SAP</span><span>Control de información</span><span>Resolución de problemas</span><span>Trabajo en equipo</span><span>Aprendizaje continuo</span>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>BOTDRIVE</h3>
+          <p>Proyecto de automatización para organizar capturas e información operativa mediante un bot y generar reportes por sucursal.</p>
+          <span class="tag">Automatización</span><span class="tag">En desarrollo</span>
+        </article>
+        <article class="card">
+          <h3>Portafolio profesional</h3>
+          <p>Este sitio reúne mi perfil, habilidades y proyectos, y servirá como base para publicar nuevas soluciones digitales.</p>
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Cloudflare</span>
+        </article>
+        <article class="card">
+          <h3>Próximo proyecto</h3>
+          <p>Estoy preparando nuevos proyectos. Esta sección se actualizará conforme publique avances y demostraciones.</p>
+          <span class="tag">En construcción</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="contact">
+        <div>
+          <h2 style="margin-bottom:6px">¿Hablamos de un proyecto?</h2>
+          <p style="margin:0;color:var(--muted)">Estoy abierto a oportunidades de aprendizaje, colaboración y desarrollo web.</p>
+        </div>
+        <div class="actions" style="margin-top:0">
+          <a class="btn primary" href="https://www.linkedin.com/in/joanloreto" target="_blank" rel="noopener noreferrer">Contactarme por LinkedIn</a>
+          <a class="btn" href="https://github.com/joanloret" target="_blank" rel="noopener noreferrer">Ver GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Jorge Loreto · Portafolio profesional</div>
+  </footer>
+</body>
+</html>
