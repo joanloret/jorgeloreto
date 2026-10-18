@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#17211f">
+  <title>Dash Loreto · Panel maestro</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101715;--panel:#19231f;--line:#33443c;--text:#f0f4ef;--muted:#b3c0b7;--accent:#b7e4c7;--warn:#f5d49a}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top left,#24362d 0,transparent 46%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--accent)}.wrap{width:min(1120px,92%);margin:auto}.top{padding:34px 0 24px;border-bottom:1px solid var(--line)}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;color:var(--accent);font-weight:750}h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.02;letter-spacing:-.04em;margin:.4rem 0 1rem}h2{font-size:1.2rem;margin:0 0 .7rem}.intro{max-width:760px;color:var(--muted);font-size:1.08rem}.notice{margin:24px 0;padding:18px 20px;border:1px solid #806a3d;border-radius:14px;background:#302819}.notice strong{color:var(--warn)}.notice p{margin:.35rem 0 0;color:#e9dfca}.section{padding:32px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}.card{padding:20px;border:1px solid var(--line);border-radius:16px;background:rgba(25,35,31,.88);display:flex;flex-direction:column;gap:10px;min-height:180px}.card p{margin:0;color:var(--muted);font-size:.94rem}.tag{align-self:flex-start;border:1px solid var(--line);border-radius:99px;padding:3px 9px;color:var(--muted);font-size:.76rem}.card a{margin-top:auto;font-weight:700;text-decoration:none}.card a:hover{text-decoration:underline}.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.step{border-left:3px solid var(--accent);padding:5px 15px}.step p{color:var(--muted);margin:.35rem 0}footer{padding:25px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+<header class="top"><div class="wrap"><p class="eyebrow">DASH LORETO · CONCEPTO EN DESARROLLO</p><h1>Dash Loreto</h1><p class="intro">La idea de un centro de control personal para organizar tus proyectos, revisar su código y, en una etapa futura, administrar cambios desde un solo lugar sin poner en riesgo los sistemas actuales.</p></div></header>
+<main class="wrap">
+  <section class="notice" aria-labelledby="notice-title"><strong id="notice-title">Concepto en desarrollo — todavía no es un panel privado</strong><p>Dash Loreto es por ahora una idea representada en un prototipo informativo. Esta página no autentica usuarios, no garantiza privacidad y no puede editar ni guardar datos. El objetivo es que solo tú tengas acceso y permiso para modificar; esa exclusividad deberá implementarse y probarse con autenticación real en el servidor antes de considerar privado el panel.</p></section>
+  <section class="section" aria-labelledby="repos-title"><p class="eyebrow">Inventario inicial</p><h2 id="repos-title">Proyectos que podría reunir Dash Loreto</h2><div class="grid">
+    <article class="card"><span class="tag">Python · Render</span><h2>BOTDRIVE</h2><p>Bot de WhatsApp, Google Sheets y administración de sucursales. Se conserva aislado del nuevo panel.</p><a href="https://github.com/joanloret/BOTDRIVE">Revisar repositorio ↗</a></article>
+    <article class="card"><span class="tag">Cloudflare Pages / Functions</span><h2>Horarios-847</h2><p>Consulta de horarios. La edición requiere endpoint separado y permisos de propietario.</p><a href="https://github.com/joanloret/Horarios-847">Revisar repositorio ↗</a></article>
+    <article class="card"><span class="tag">Sitio estático</span><h2>9</h2><p>Página web con contenido y encuestas de reacciones. No confundir votos con registros editables.</p><a href="https://github.com/joanloret/9">Revisar repositorio ↗</a></article>
+    <article class="card"><span class="tag">Portafolio</span><h2>jorgeloreto</h2><p>Índice central y documentación de la arquitectura administrativa.</p><a href="https://github.com/joanloret/jorgeloreto">Revisar repositorio ↗</a></article>
+    <article class="card"><span class="tag">Next.js</span><h2>turn-on</h2><p>Revisar rutas, almacenamiento y despliegue antes de integrar edición.</p><a href="https://github.com/joanloret/turn-on">Revisar repositorio ↗</a></article>
+    <article class="card"><span class="tag">Flutter</span><h2>FIMSS</h2><p>Proyecto de aplicación; requiere decidir el alcance del panel web sin tratarlo como sitio estático.</p><a href="https://github.com/joanloret/FIMSS">Revisar repositorio ↗</a></article>
+  </div></section>
+  <section class="section" aria-labelledby="plan-title"><p class="eyebrow">Siguientes etapas</p><h2 id="plan-title">Ruta de implementación</h2><div class="steps">
+    <div class="step"><strong>Preparar seguridad</strong><p>Definir proveedor de identidad, lista de cuentas autorizadas y permisos por proyecto.</p></div>
+    <div class="step"><strong>Construir el backend</strong><p>Validación en servidor, registros de auditoría, control de versiones y secretos en variables de entorno.</p></div>
+    <div class="step"><strong>Probar en un piloto</strong><p>Usar datos no críticos; exigir confirmación del proyecto, sucursal, módulo y registro antes de guardar.</p></div>
+    <div class="step"><strong>Expandir gradualmente</strong><p>Activar cada adaptador tras verificar pruebas, respaldo y recuperación; no fusionar repositorios por comodidad.</p></div>
+  </div></section>
+  <section class="section"><p class="eyebrow">Seguimiento técnico</p><h2>Seguimiento del concepto</h2><p class="intro">La especificación de arquitectura y la tarea general se mantienen en GitHub para revisar cambios y decisiones.</p><p><a href="https://github.com/joanloret/jorgeloreto/blob/main/ADMIN_PANEL_ARCHITECTURE.md">Documento de arquitectura ↗</a> · <a href="https://github.com/joanloret/jorgeloreto/issues/1">Tarea de implementación ↗</a></p></section>
+</main>
+<footer><div class="wrap">Dash Loreto · Concepto en desarrollo. Prototipo informativo; no usar como control de acceso ni para administrar sistemas productivos.</div></footer>
+</body>
+</html>
