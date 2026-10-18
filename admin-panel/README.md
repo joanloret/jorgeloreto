@@ -1,12 +1,12 @@
-# Centro de administración de proyectos
+# Dash Loreto — concepto de centro de control
 
-Este directorio contiene el **prototipo informativo** del futuro centro «Modificar».
+Este directorio contiene el **prototipo informativo de Dash Loreto**, una idea para reunir en un solo lugar la administración de los proyectos de Jorge Loreto. Todavía no es una aplicación funcional ni un servicio privado.
 
 ## Estado de seguridad
 
-- No autentica usuarios.
+- No autentica usuarios ni restringe el acceso a una sola persona.
 - No edita ni guarda datos.
-- No debe considerarse un panel privado aunque la página incluya `noindex`.
+- La meta del proyecto es que solo el propietario pueda acceder y modificar, pero esa regla aún no está implementada. `noindex` no es seguridad.
 - No incluir contraseñas, tokens, correos privados ni datos operativos en este directorio.
 - No conectar formularios de escritura hasta tener un backend que valide identidad, lista de autorización y permisos en cada solicitud.
 
