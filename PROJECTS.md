@@ -1,44 +1,55 @@
-# Organización general de proyectos
+# Portafolio maestro de proyectos
 
-Este documento es el índice maestro de proyectos. Los repositorios continúan siendo independientes para conservar su historial, permisos, configuración y despliegues.
+Inventario central de proyectos de Jorge Loreto. Los repositorios siguen independientes para conservar historial, permisos, configuración, despliegues y responsables. Este documento distingue entre **página informativa**, **aplicación publicada** y **servicio backend**: no son equivalentes.
 
-## 1. DRIVECOPP
+## Publicación del portafolio
 
-Grupo de soluciones operativas por sucursal.
+- **Sitio central:** https://jorgeloreto-portfolio.onrender.com/
+- **Repositorio:** [jorgeloreto](https://github.com/joanloret/jorgeloreto)
+- **Hosting:** Render Static Site, conectado a `main` con despliegue automático.
+- **Costo previsto:** $0 para el servicio estático dentro de los límites del plan gratuito; revisar el uso de ancho de banda en Render.
+- **Páginas por proyecto:** la carpeta `proyectos/` contiene una ficha independiente para cada proyecto identificado.
+- **SEO básico:** metadatos por página, URL canónica, Open Graph, `robots.txt`, `sitemap.xml` y favicon.
 
-### Sucursal 847
-- **Bot_847** — bot e integración con Google Drive. Repositorio actual: [BOTDRIVE](https://github.com/joanloret/BOTDRIVE). Servicio actual: [botdrive-r4si.onrender.com](https://botdrive-r4si.onrender.com).
-- **Horarios_847** — horarios y validación de sucursal. Repositorio actual: [Horarios-847](https://github.com/joanloret/Horarios-847). La URL de producción debe validarse antes de publicarse aquí.
-- **Incumplimieto_Usf** — proyecto pendiente de identificar/verificar en los repositorios accesibles. No se asigna a otro sistema hasta confirmar que existe y cuál es su código.
+## Inventario
 
-### Sucursales futuras
-Añadir cada nueva sucursal como grupo independiente con su propio inventario de aplicaciones, configuración, permisos y páginas web.
+| Grupo | Proyecto | Repositorio | Estado conocido | Página / siguiente paso |
+|---|---|---|---|---|
+| DRIVECOPP · 847 | Bot_847 | [BOTDRIVE](https://github.com/joanloret/BOTDRIVE) | Backend Flask en Render; despliegues recientes reportados como exitosos. El servicio gratuito puede dormir por inactividad. | [Ficha](https://jorgeloreto-portfolio.onrender.com/proyectos/bot-847.html) · [Servicio](https://botdrive-r4si.onrender.com) |
+| DRIVECOPP · 847 | Horarios_847 | [Horarios-847](https://github.com/joanloret/Horarios-847) | Aplicación privada de horarios. README indica que no debe considerarse producción hasta configurar OAuth, usuarios permitidos y fuente real. | [Ficha](https://jorgeloreto-portfolio.onrender.com/proyectos/horarios-847.html) · publicar solo tras validación |
+| DRIVECOPP · 847 | Incumplimieto_Usf | Repositorio por identificar | No se ha identificado un repositorio correcto; no se vincula con otra aplicación por suposición. | [Ficha provisional](https://jorgeloreto-portfolio.onrender.com/proyectos/incumplimieto-usf.html) · confirmar repositorio y propósito |
+| Portafolio | TECH | [TECH](https://github.com/joanloret/TECH) | Repositorio público; la URL de producto no está verificada. | [Ficha](https://jorgeloreto-portfolio.onrender.com/proyectos/tech.html) · revisar README y contenido |
+| Música | 9 Loretos | [9](https://github.com/joanloret/9) | Sitio estático en Render: [loretos.onrender.com](https://loretos.onrender.com). La ficha del repositorio documenta reproductores oficiales y una API de reacciones que requiere configurar Cloudflare D1. | [Sitio musical](https://loretos.onrender.com) · [Ficha](https://jorgeloreto-portfolio.onrender.com/proyectos/proyecto-musical.html) |
+| Portafolio | FIMSS | [FIMSS](https://github.com/joanloret/FIMSS) | Repositorio Flutter. Existe un proyecto Supabase llamado FIMSS; la base de datos estuvo inactiva y la conexión aún debe verificarse. No asumir que el repositorio y la base ya están conectados. | [Ficha](https://jorgeloreto-portfolio.onrender.com/proyectos/fimss.html) · revisar compilación y Supabase |
+| Portafolio | Ringtones | [Ringtones-master](https://github.com/joanloret/Ringtones-master) | Código disponible; tecnología y estado de publicación por auditar. | [Ficha](https://jorgeloreto-portfolio.onrender.com/proyectos/ringtones.html) · revisar archivos y requisitos |
+| Portafolio | Identificador dactilar | [Identificador_Dactilar-master](https://github.com/joanloret/Identificador_Dactilar-master) | Código disponible; aplicación y entorno de ejecución por auditar. No publicar datos biométricos reales. | [Ficha](https://jorgeloreto-portfolio.onrender.com/proyectos/identificador-dactilar.html) · revisar privacidad y tecnología |
+| Portafolio | D-Notch / DynamicNotch | [D-Notch](https://github.com/joanloret/D-Notch) | Aplicación nativa macOS. Una página web informativa no sustituye ni convierte la app en una aplicación web. | [Ficha](https://jorgeloreto-portfolio.onrender.com/proyectos/d-notch.html) · revisar licencia, autoría y proceso de distribución |
+| Portafolio | turn-on | [turn-on](https://github.com/joanloret/turn-on) | Proyecto Next.js; no hay URL de producción verificada. | [Ficha](https://jorgeloreto-portfolio.onrender.com/proyectos/turn-on.html) · revisar rutas, variables y build antes de publicar |
+| Portafolio | jorgeloreto | [jorgeloreto](https://github.com/joanloret/jorgeloreto) | Portafolio y fichas de proyectos publicados como sitio estático. | [Abrir portafolio](https://jorgeloreto-portfolio.onrender.com/) |
 
-## 2. jorgeloreto
+## Estrategia de alojamiento sin costo
 
-### TECH
-- Repositorio: [TECH](https://github.com/joanloret/TECH).
-- Página del proyecto: pendiente de verificar la URL publicada.
+1. **Páginas estáticas y fichas informativas:** mantener HTML/CSS/JS sin dependencias y desplegar en un hosting estático gratuito. Para sitios de bajo tráfico ya conectados a Render, revisar el límite de ancho de banda; Cloudflare Pages es la alternativa a evaluar si se necesita más margen estático.
+2. **Aplicaciones web dinámicas:** elegir plataforma después de verificar framework, persistencia, autenticación y límites. El plan gratuito de Render puede dormir por inactividad; no se debe presentar como alta disponibilidad.
+3. **Datos compartidos:** no usar almacenamiento local del navegador como fuente oficial. Para datos operativos, evaluar persistencia, permisos por rol, copias de seguridad, exportación y recuperación antes de pasar a producción.
+4. **Supabase Free:** útil para prototipos y pilotos; sus proyectos pueden pausarse por inactividad y el plan gratuito no equivale a un SLA de producción. Verificar el estado del proyecto FIMSS antes de aplicar migraciones.
+5. **Dominio:** usar primero el subdominio gratuito del proveedor. Un dominio propio normalmente implica un costo anual, así que no se presupone como requisito.
+6. **Seguridad:** ningún secreto, token, clave privada, teléfono de administrador ni dato biométrico debe publicarse en el repositorio o en el frontend.
+7. **Despliegues:** probar en una rama o entorno de prueba; publicar cambios de producción solo después de revisar los flujos esenciales y confirmar que no se alteran datos reales.
 
-### Proyecto musical
-- Repositorio actual: [9](https://github.com/joanloret/9).
-- Sitio desplegado en Render: [loretos.onrender.com](https://loretos.onrender.com).
-- El nombre del repositorio es provisional para la organización y debe normalizarse cuando pueda hacerse el cambio de nombre con la herramienta de administración correspondiente.
+## Prioridades de auditoría
 
-### Portafolio de programación
-- Portafolio principal: este repositorio [jorgeloreto](https://github.com/joanloret/jorgeloreto).
-- Proyectos relacionados:
-  - [FIMSS](https://github.com/joanloret/FIMSS)
-  - [Ringtones-master](https://github.com/joanloret/Ringtones-master)
-  - [Identificador_Dactilar-master](https://github.com/joanloret/Identificador_Dactilar-master)
-  - [D-Notch](https://github.com/joanloret/D-Notch) — aplicación macOS nativa; requiere una página informativa web aparte, no se debe presentar como aplicación web sin convertirla.
-  - [turn-on](https://github.com/joanloret/turn-on)
+- **P0 — integridad y acceso:** verificar Supabase FIMSS, autenticación y permisos; confirmar fuente de datos y autorización de Horarios_847.
+- **P1 — operación:** probar el flujo de administración de BOTDRIVE, persistencia, recuperación de errores y cold start del plan gratuito.
+- **P1 — producto web:** revisar las funciones reales de TECH, turn-on, Ringtones e Identificador dactilar antes de prometer características en sus páginas.
+- **P2 — publicación:** validar 9 Loretos y la API de reacciones, incluido el binding D1.
+- **P2 — privacidad y distribución:** revisar el tratamiento de datos del Identificador dactilar y la licencia/autoría de D-Notch.
+- **P3 — orden:** decidir nombres definitivos de repositorios y servicios solo después de revisar integraciones, workflows, URLs y enlaces entrantes.
 
-## Reglas de organización
+## Reglas de mantenimiento
 
-1. Cada proyecto mantiene su repositorio y su propia página o ficha web.
-2. La página del portafolio funciona como índice; no sustituye las páginas individuales.
-3. No eliminar repositorios por similitud de nombres. Comparar funciones, historial, archivos, dependencias y despliegues; migrar cualquier función exclusiva antes de archivar un duplicado.
-4. Los secretos y credenciales no se guardan en este documento ni en el código.
-5. Antes de renombrar repositorios o servicios, revisar integraciones, URL de despliegue, webhooks, workflows y enlaces entrantes.
-6. Marcar una web como publicada únicamente después de comprobar la URL y su estado.
+- No eliminar ni fusionar repositorios solo por nombres parecidos; comparar código, historial, dependencias y despliegues.
+- Marcar una aplicación como **producción** solo cuando la URL, autenticación, datos y flujos principales hayan sido probados.
+- Cada nuevo proyecto debe registrar propósito, repositorio, URL, hosting, variables requeridas (nunca sus valores secretos), responsable y procedimiento de recuperación.
+- Revisar mensualmente límites de uso, despliegues fallidos, dependencias y enlaces rotos.
+
