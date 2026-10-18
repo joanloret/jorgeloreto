@@ -14,12 +14,24 @@ Este directorio contiene el **prototipo informativo de Dash Loreto**, una idea p
 
 Abre `index.html` en un navegador para revisar el inventario y la ruta de implementación.
 
+## Arquitectura propuesta
+
+- **Mac:** entorno principal para desarrollar, revisar y probar cambios.
+- **GitHub:** código versionado y cambios mediante ramas y revisiones.
+- **Cloudflare (candidato):** interfaz web y API administrativa aislada, sujeto a validar requisitos.
+- **Autenticación:** proveedor de identidad con verificación en servidor y allowlist de una sola cuenta propietaria.
+- **Datos:** almacenamiento persistente, auditoría y recuperación; se elegirá después de revisar las necesidades de cada integración.
+- **Integraciones:** adaptadores por proyecto, con permisos mínimos y sin compartir secretos con el navegador.
+
+El panel web no dependerá de que el Mac esté encendido. El Mac será el espacio principal de trabajo, no necesariamente el servidor.
+
 ## Próxima fase técnica
 
-1. Confirmar el dominio y la plataforma elegidos para alojar el backend central.
-2. Configurar autenticación en servidor y cuentas autorizadas mediante variables de entorno.
-3. Implementar auditoría, control de versiones, validación de IDs y rollback.
-4. Añadir un adaptador de un solo proyecto piloto y pruebas de seguridad.
-5. Activar escrituras solo después de probar el despliegue en un entorno no productivo.
+1. Revisar el inventario de proyectos y confirmar qué datos requiere administrar cada uno.
+2. Elegir proveedor de identidad y definir cómo registrar de forma segura la única cuenta propietaria.
+3. Diseñar API, modelo de datos, auditoría, versionado y recuperación.
+4. Crear un entorno de pruebas aislado y un adaptador piloto sin escrituras productivas.
+5. Ejecutar pruebas de autenticación, autorización, acceso no autorizado, recuperación y concurrencia.
+6. Considerar cualquier despliegue solo tras una revisión explícita; esta fase no autoriza despliegues ni cambios productivos.
 
 Ver [ADMIN_PANEL_ARCHITECTURE.md](../ADMIN_PANEL_ARCHITECTURE.md) y el [issue de implementación](https://github.com/joanloret/jorgeloreto/issues/1).
