@@ -1,7 +1,26 @@
-# Panel central «Modificar» — arquitectura y despliegue seguro
+# Dash Loreto — arquitectura propuesta y despliegue seguro
 
-## Objetivo
-Ofrecer desde cada sitio una entrada al panel central con autenticación de servidor, permisos por proyecto/sucursal/módulo y confirmación de identificadores antes de guardar.
+## Objetivo y decisiones del propietario
+Dash Loreto es una idea en etapa de diseño: un centro de control para administrar proyectos desde el Mac del propietario y, cuando sea necesario, acceder mediante internet.
+
+Decisiones confirmadas:
+- Nombre del proyecto: **Dash Loreto**.
+- Uso previsto: Mac + acceso web privado.
+- Prioridad: seguridad y acceso exclusivo para el propietario.
+- Estado actual: prototipo informativo; no autentica usuarios ni guarda cambios.
+- Restricción de esta fase: no fusionar la rama, no desplegar en producción y no habilitar escrituras productivas.
+
+El panel deberá ofrecer una entrada central con autenticación de servidor, permisos por proyecto/sucursal/módulo y confirmación de identificadores antes de guardar.
+
+## Arquitectura recomendada
+1. **Mac del propietario:** entorno principal de desarrollo, revisión y pruebas. Mantener una copia local del código y utilizar Git para cambios versionados.
+2. **GitHub:** repositorio central del código, ramas de funciones, revisiones y registro de cambios; el repositorio por sí solo no constituye el control de acceso del panel.
+3. **Cloudflare (candidato para el acceso web):** Pages para la interfaz y Workers para una API administrativa aislada, sujeto a revisar requisitos y límites antes de seleccionarlo definitivamente.
+4. **Identidad y autorización en servidor:** proveedor de identidad con verificación del lado servidor y lista permitida de una única cuenta del propietario. No confiar en botones ocultos, rutas secretas ni validaciones solo del navegador.
+5. **Almacenamiento persistente:** elegir una base de datos tras mapear los datos y permisos de cada proyecto. No usar almacenamiento local del navegador como fuente de verdad ni asumir que una instancia temporal conserva los datos.
+6. **Integraciones por adaptador:** conectar cada proyecto mediante endpoints explícitos y mínimos permisos. No conceder acceso genérico a todos los repositorios ni exponer secretos en el frontend.
+
+La arquitectura debe permitir que el panel web siga disponible sin que el Mac permanezca encendido; el Mac continúa siendo el espacio principal de trabajo, no necesariamente el servidor de producción.
 
 ## Inventario auditado (rama predeterminada: main)
 
